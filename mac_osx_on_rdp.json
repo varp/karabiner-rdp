@@ -435,18 +435,22 @@
 
 
         {
-            "description": "Mac OSX RDP: Reload(Ctrl+R, Ctrl+F5)",
+            "description": "Mac OSX RDP: Reload browser page Command+R to F5",
             "manipulators": [
 
                 {
                     "type": "basic",
+                    "parameters": {
+                        "basic.simultaneous_threshold_milliseconds": 500
+                    },
                     "from": {
-                        "key_code": "r",
-                        "modifiers": {
-                            "mandatory": [
-                                "command"
-                            ]
-                        }
+                        "simultaneous": [{
+                                "key_code": "left_command"
+                            },
+                            {
+                                "key_code": "r"
+                            }
+                        ]
                     },
                     "to": [{
                         "key_code": "f5"
