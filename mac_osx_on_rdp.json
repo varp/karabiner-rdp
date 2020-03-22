@@ -655,7 +655,7 @@
                     }
                 },
                 "to": [{
-                    "key_code": "spacebar"
+                    "key_code": "delete_forward"
                 }],
                 "conditions": [{
                     "type": "frontmost_application_if",
