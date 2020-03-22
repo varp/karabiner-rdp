@@ -3,7 +3,7 @@
     "rules": [
 
         {
-            "description": "Home key to the beginning of the sentence (Command + Left)",
+            "description": "Mac OSX RDP: Home key to the beginning of the sentence (Command + Left)",
             "manipulators": [
 
                 {
@@ -47,7 +47,7 @@
 
 
         {
-            "description": "End key to the end of the sentence (Command + Right)",
+            "description": "Mac OSX RDP: End key to the end of the sentence (Command + Right)",
             "manipulators": [{
                     "type": "basic",
                     "from": {
@@ -90,7 +90,7 @@
 
 
         {
-            "description": "Option(Alt)+Tab as Switch Application (Command+Tab)",
+            "description": "Mac OSX RDP: Option(Alt)+Tab as Switch Application (Command+Tab)",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -127,7 +127,7 @@
 
 
         {
-            "description": "PC-Style Copy/Paste/Cut",
+            "description": "Mac OSX RDP: PC-Style Copy/Paste/Cut",
             "manipulators": [
 
                 {
@@ -219,7 +219,7 @@
 
 
         {
-            "description": "PC-Style Control+Left/Right",
+            "description": "Mac OSX RDP: PC-Style Control+Left/Right",
             "manipulators": [
 
                 {
@@ -286,7 +286,7 @@
 
 
         {
-            "description": "PC-Style Undo",
+            "description": "Mac OSX RDP: PC-Style Undo",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -318,7 +318,7 @@
             }]
         },
         {
-            "description": "PC-Style Redo",
+            "description": "Mac OSX RDP: PC-Style Redo",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -348,7 +348,7 @@
             }]
         },
         {
-            "description": "PC-Style Select-All",
+            "description": "Mac OSX RDP: PC-Style Select-All",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -380,7 +380,7 @@
             }]
         },
         {
-            "description": "PC-Style Save",
+            "description": "Mac OSX RDP: PC-Style Save",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -412,7 +412,7 @@
             }]
         },
         {
-            "description": "PC-Style New",
+            "description": "Mac OSX RDP: PC-Style New",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -446,7 +446,7 @@
 
 
         {
-            "description": "PC-Style Reload(Ctrl+R, Ctrl+F5)",
+            "description": "Mac OSX RDP: PC-Style Reload(Ctrl+R, Ctrl+F5)",
             "manipulators": [
 
                 {
@@ -513,7 +513,7 @@
 
 
         {
-            "description": "PC-Style New Tab",
+            "description": "Mac OSX RDP: PC-Style New Tab",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -545,7 +545,7 @@
             }]
         },
         {
-            "description": "PC-Style Find",
+            "description": "Mac OSX RDP: PC-Style Find",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -577,7 +577,7 @@
             }]
         },
         {
-            "description": "PC-Style Open",
+            "description": "Mac OSX RDP: PC-Style Open",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -609,7 +609,7 @@
             }]
         },
         {
-            "description": "PC-Style Close Window",
+            "description": "Mac OSX RDP: PC-Style Close Window",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -643,7 +643,7 @@
 
 
         {
-            "description": "PC-Style Switch Input (Command+Space)",
+            "description": "Mac OSX RDP: PC-Style Switch Input (Command+Space)",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -675,7 +675,7 @@
             }]
         },
         {
-            "description": "PC-Style Quit Application (Alt+F4 to Command+Q)",
+            "description": "Mac OSX RDP: PC-Style Quit Application (Alt+F4 to Command+Q)",
             "manipulators": [{
                 "type": "basic",
                 "from": {
@@ -707,7 +707,7 @@
             }]
         },
         {
-            "description": "PC-Style Browser open location (Ctrl+L)",
+            "description": "Mac OSX RDP: PC-Style Browser open location (Ctrl+L)",
             "manipulators": [{
                 "type": "basic",
                 "from": {
