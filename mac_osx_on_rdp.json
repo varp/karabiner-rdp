@@ -4,58 +4,63 @@
 
         {
             "description": "Mac OSX RDP: Home key to the beginning of the sentence (Command + Left)",
-            "manipulators": [
-
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "left_command"
-                    },
-                    "to": [{
-                        "key_code": "left_command",
-                        "lazy": true
-                    }],
-                    "conditions": [{
-                        "type": "frontmost_application_if",
-                        "bundle_identifiers": [
-                            "^com\\.microsoft\\.rdc$",
-                            "^com\\.microsoft\\.rdc\\.mac$",
-                            "^com\\.microsoft\\.rdc\\.macos$",
-                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
-                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
-                            "^com\\.teamviewer\\.TeamViewer$",
-                            "^com\\.vmware\\.horizon$"
-                        ]
-                    }]
-
+            "manipulators": [{
+                "type": "basic",
+                "parameters": {
+                    "basic.simultaneous_threshold_milliseconds": 500
                 },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "left_arrow",
-                        "modifiers": {
-                            "mandatory": ["command"],
-                            "optional": ["any"]
+                "from": {
+                    "simultaneous": [
+
+                        {
+                            "key_code": "left_command"
+                        },
+                        {
+                            "key_code": "left_arrow"
                         }
-                    },
-                    "to": [{
-                        "key_code": "home"
-                    }]
-                }
-            ]
+                    ]
+                },
+                "to": [{
+                    "key_code": "home"
+                }],
+                "conditions": [{
+                    "bundle_identifiers": [
+                        "^com\\.microsoft\\.rdc$",
+                        "^com\\.microsoft\\.rdc\\.mac$",
+                        "^com\\.microsoft\\.rdc\\.macos$",
+                        "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                        "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                        "^com\\.teamviewer\\.TeamViewer$",
+                        "^com\\.vmware\\.horizon$"
+                    ],
+                    "type": "frontmost_application_if"
+                }]
+            }]
         },
 
 
         {
             "description": "Mac OSX RDP: End key to the end of the sentence (Command + Right)",
-            "manipulators": [{
+            "manipulators": [
+
+                {
                     "type": "basic",
+                    "parameters": {
+                        "basic.simultaneous_threshold_milliseconds": 500
+                    },
                     "from": {
-                        "key_code": "left_command"
+                        "simultaneous": [
+
+                            {
+                                "key_code": "left_command"
+                            },
+                            {
+                                "key_code": "right_arrow"
+                            }
+                        ]
                     },
                     "to": [{
-                        "key_code": "left_command",
-                        "lazy": true
+                        "key_code": "end"
                     }],
                     "conditions": [{
                         "type": "frontmost_application_if",
@@ -68,20 +73,6 @@
                             "^com\\.teamviewer\\.TeamViewer$",
                             "^com\\.vmware\\.horizon$"
                         ]
-                    }]
-                },
-
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "right_arrow",
-                        "modifiers": {
-                            "mandatory": ["command"],
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [{
-                        "key_code": "end"
                     }]
                 }
             ]
@@ -106,9 +97,7 @@
                 },
                 "to": [{
                     "key_code": "tab",
-                    "modifiers": [
-                        "option", "shift"
-                    ]
+                    "modifiers": ["option"]
                 }],
                 "conditions": [{
                     "type": "frontmost_application_if",
@@ -460,10 +449,7 @@
                         }
                     },
                     "to": [{
-                        "key_code": "r",
-                        "modifiers": [
-                            "control"
-                        ]
+                        "key_code": "f5"
                     }],
                     "conditions": [{
                         "type": "frontmost_application_if",
@@ -641,57 +627,10 @@
             }]
         },
 
-
-        {
-            "description": "Mac OSX RDP: Fn+Backspace to Forward Delete (Like as Command+Backspace in Finder)",
-            "manipulators": [{
-                "type": "basic",
-                "from": {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": {
-                        "mandatory": [
-                            "fn"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "delete_forward"
-                }],
-                "conditions": [{
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                        "^com\\.microsoft\\.rdc$",
-                        "^com\\.microsoft\\.rdc\\.mac$",
-                        "^com\\.microsoft\\.rdc\\.macos$",
-                        "^com\\.microsoft\\.rdc\\.osx\\.beta$",
-                        "^com\\.thinomenon\\.RemoteDesktopConnection$",
-                        "^com\\.teamviewer\\.TeamViewer$",
-                        "^com\\.vmware\\.horizon$"
-                    ]
-                }]
-            }]
-        },
-
         {
             "description": "Mac OSX RDP: Fn+Space To Switch Input (Command+Space)",
             "manipulators": [{
-                "type": "basic",
-                "from": {
-                    "key_code": "spacebar",
-                    "modifiers": {
-                        "mandatory": [
-                            "fn"
-                        ]
-                    }
-                },
-                "to": [{
-                    "key_code": "spacebar",
-                    "modifiers": [
-                        "command"
-                    ]
-                }],
                 "conditions": [{
-                    "type": "frontmost_application_if",
                     "bundle_identifiers": [
                         "^com\\.microsoft\\.rdc$",
                         "^com\\.microsoft\\.rdc\\.mac$",
@@ -700,8 +639,29 @@
                         "^com\\.thinomenon\\.RemoteDesktopConnection$",
                         "^com\\.teamviewer\\.TeamViewer$",
                         "^com\\.vmware\\.horizon$"
-                    ]
-                }]
+                    ],
+                    "type": "frontmost_application_if"
+                }],
+                "from": {
+                    "key_code": "spacebar",
+                    "modifiers": {
+                        "mandatory": [
+                            "fn"
+                        ]
+                    }
+                },
+                "to": [
+
+                    {
+                        "key_code": "left_gui",
+                        "lazy": true
+                    },
+                    {
+                        "key_code": "spacebar",
+                        "modifiers": ["right_gui"]
+                    }
+                ],
+                "type": "basic"
             }]
         },
         {
