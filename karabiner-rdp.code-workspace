@@ -1,0 +1,16 @@
+{
+    "folders": [{
+            "path": "/Users/vardanpro/.config/karabiner"
+        },
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "beautify.config": {
+            "js": {
+                "brace_style": "collapse",
+            }
+        },
+    }
+}
