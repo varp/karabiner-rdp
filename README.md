@@ -1,4 +1,4 @@
-# MAC OSX shortcuts to PC using RDP sessions  
+# Mac OSX shortcuts to PC in Remote Desktop sessions  
 
 Translate MAC OS X shortcuts to PC equivalent during remote sessions. The
 following applications input:
