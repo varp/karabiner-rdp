@@ -26,7 +26,7 @@ or just browse in Safari to `karabiner://karabiner/assets/complex_modifications/
 
 Just replace `<FULL_FILE_PATH>` with path of the project on your machine to get properly encoded URL:
 ```
-php -r 'echo "karabiner://karabiner/assets/complex_modifications/import?url=". urlencode("file://<FULL_FILE_PATH>/Mac_OSX_like.json").PHP_EOL; 
+php -r 'echo "karabiner://karabiner/assets/complex_modifications/import?url=". urlencode("file://<FULL_FILE_PATH>/mac_osx_on_rdp.json").PHP_EOL; 
 ```
 
 Karabiner will do the rest! =)

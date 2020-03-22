@@ -1,11 +1,7 @@
 {
     "folders": [{
-            "path": "/Users/vardanpro/.config/karabiner"
-        },
-        {
-            "path": "."
-        }
-    ],
+        "path": "."
+    }],
     "settings": {
         "beautify.config": {
             "js": {
