@@ -206,9 +206,8 @@
         },
 
 
-
         {
-            "description": "Mac OSX RDP: Control+Left/Right",
+            "description": "Mac OSX RDP: Alt+Left/Right to Control+Left/Right",
             "manipulators": [
 
                 {
@@ -218,7 +217,8 @@
                         "modifiers": {
                             "mandatory": [
                                 "left_option"
-                            ]
+                            ],
+                            "optional": ["shift"]
                         }
                     },
                     "to": [{
@@ -247,7 +247,8 @@
                         "modifiers": {
                             "mandatory": [
                                 "left_option"
-                            ]
+                            ],
+                            "optional": ["shift"]
                         }
                     },
                     "to": [{
