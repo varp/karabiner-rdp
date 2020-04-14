@@ -1,7 +1,9 @@
 {
-    "folders": [{
-        "path": "."
-    }],
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
     "settings": {
         "beautify.config": {
             "js": {
