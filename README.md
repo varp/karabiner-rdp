@@ -24,9 +24,9 @@ For local testing and development you can import JSON using `file://` URL.
 Using Terminal `open karabiner://karabiner/assets/complex_modifications/import?url=<JSON_URL>`
 or just browse in Safari to `karabiner://karabiner/assets/complex_modifications/import?url=<JSON_URL>`.
 
-Just replace `<FULL_FILE_PATH>` with path of the project on your machine to get properly encoded URL:
+Just replace `<FULL_FILE_PATH>` with absolute path of the project on your machine to get properly encoded URL:
 ```
-php -r 'echo "karabiner://karabiner/assets/complex_modifications/import?url=". urlencode("file://<FULL_FILE_PATH>/mac_osx_on_rdp.json").PHP_EOL; 
+php -r 'echo "karabiner://karabiner/assets/complex_modifications/import?url=". urlencode("file://<FULL_FILE_PATH>/mac_osx_on_rdp.json").PHP_EOL;' 
 ```
 
 Karabiner will do the rest! =)
