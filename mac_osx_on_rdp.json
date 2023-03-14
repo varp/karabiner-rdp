@@ -208,7 +208,6 @@
             ]
         },
 
-
         {
             "description": "Mac OSX RDP: Alt+Left/Right to Control+Left/Right",
             "manipulators": [
@@ -277,6 +276,80 @@
         },
 
 
+        {
+            "description": "Mac OSX RDP: CMD+Shift+Left/Right to Shift+Home/End",
+            "manipulators": [
+
+                {
+                    "type": "basic",
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "left_command"
+                            },
+                            {
+                                "key_code": "left_shit"
+                            },
+                            {
+                                "key_code": "left_arrow"
+                            }
+                        ]
+                    },
+                    "to": [{
+                        "key_code": "home",
+                        "modifiers": [
+                            "left_shift"
+                        ]
+                    }],
+                    "conditions": [{
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.microsoft\\.rdc$",
+                            "^com\\.microsoft\\.rdc\\.mac$",
+                            "^com\\.microsoft\\.rdc\\.macos$",
+                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                            "^com\\.teamviewer\\.TeamViewer$",
+                            "^com\\.vmware\\.horizon$"
+                        ]
+                    }]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "left_command"
+                            },
+                            {
+                                "key_code": "left_shit"
+                            },
+                            {
+                                "key_code": "right_arrow"
+                            }
+                        ]
+                    },
+                    "to": [{
+                        "key_code": "end",
+                        "modifiers": [
+                            "left_shift"
+                        ]
+                    }],
+                    "conditions": [{
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.microsoft\\.rdc$",
+                            "^com\\.microsoft\\.rdc\\.mac$",
+                            "^com\\.microsoft\\.rdc\\.macos$",
+                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                            "^com\\.teamviewer\\.TeamViewer$",
+                            "^com\\.vmware\\.horizon$"
+                        ]
+                    }]
+                }
+            ]
+        },
 
         {
             "description": "Mac OSX RDP: Undo",
