@@ -28,7 +28,7 @@
                         },
                         {
                             "set_variable": {
-                                "name": "win_used_in_combination_with", 
+                                "name": "win_used_in_combination_with",
                                 "value": true
                             }
                         }
@@ -69,7 +69,7 @@
                         },
                         {
                             "set_variable": {
-                                "name": "win_used_in_combination_with", 
+                                "name": "win_used_in_combination_with",
                                 "value": true
                             }
                         }
@@ -108,11 +108,13 @@
                     "to": [
                         {
                             "key_code": "home",
-                            "modifiers": ["shift"]
+                            "modifiers": [
+                                "shift"
+                            ]
                         },
                         {
                             "set_variable": {
-                                "name": "win_used_in_combination_with", 
+                                "name": "win_used_in_combination_with",
                                 "value": true
                             }
                         }
@@ -146,11 +148,13 @@
                     "to": [
                         {
                             "key_code": "end",
-                            "modifiers": ["shift"]
+                            "modifiers": [
+                                "shift"
+                            ]
                         },
                         {
                             "set_variable": {
-                                "name": "win_used_in_combination_with", 
+                                "name": "win_used_in_combination_with",
                                 "value": true
                             }
                         }
@@ -596,7 +600,7 @@
             ]
         },
         {
-            "description": "Mac OSX RDP: Reload browser page - Cmd+(Shift+)r to (Ctrl+)F5",
+            "description": "Mac OSX RDP: Browser: Reload page - Cmd+(Shift+)r to (Ctrl+)F5",
             "manipulators": [
                 {
                     "type": "basic",
@@ -670,6 +674,44 @@
             ]
         },
         {
+            "description": "Mac OSX RDP: Browser: Open location - Cmd+l to Ctrl+L",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "l",
+                            "modifiers": [
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.microsoft\\.rdc$",
+                                "^com\\.microsoft\\.rdc\\.mac$",
+                                "^com\\.microsoft\\.rdc\\.macos$",
+                                "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                "^com\\.teamviewer\\.TeamViewer$",
+                                "^com\\.vmware\\.horizon$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "description": "Mac OSX RDP: New Tab - Cmd+(Shift+)t to Ctrl+(Shift)t",
             "manipulators": [
                 {
@@ -690,6 +732,49 @@
                             "key_code": "t",
                             "modifiers": [
                                 "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.microsoft\\.rdc$",
+                                "^com\\.microsoft\\.rdc\\.mac$",
+                                "^com\\.microsoft\\.rdc\\.macos$",
+                                "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                "^com\\.teamviewer\\.TeamViewer$",
+                                "^com\\.vmware\\.horizon$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Mac OSX RDP: Browser: Open DevTools - Cmd+Shift+i to Ctrl+Shift+i",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "i",
+                        "modifiers": {
+                            "mandatory": [
+                                "command",
+                                "shift"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "i",
+                            "modifiers": [
+                                "control",
+                                "shift"
                             ]
                         }
                     ],
@@ -986,21 +1071,24 @@
             ]
         },
         {
-            "description": "Mac OSX RDP: Browser open location - Cmd+l to Ctrl+L",
+            "description": "Mac OSX RDP: Code: Comment out -  Cmd+/ to Ctrl+/",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "l",
+                        "key_code": "/",
                         "modifiers": {
                             "mandatory": [
                                 "command"
+                            ],
+                            "optional": [
+                                "any"
                             ]
                         }
                     },
                     "to": [
                         {
-                            "key_code": "l",
+                            "key_code": "/",
                             "modifiers": [
                                 "control"
                             ]
