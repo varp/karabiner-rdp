@@ -1076,7 +1076,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "/",
+                        "key_code": "slash",
                         "modifiers": {
                             "mandatory": [
                                 "command"
@@ -1088,7 +1088,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "/",
+                            "key_code": "slash",
                             "modifiers": [
                                 "control"
                             ]
