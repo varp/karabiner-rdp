@@ -1110,6 +1110,45 @@
                     ]
                 }
             ]
+        },
+        {
+            "description": "Mac OSX RDP: Windows Clipboard History: Cmd+Shift+V to Win+V",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "v",
+                        "modifiers": {
+                            "mandatory": [
+                                "command",
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "left_gui"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.microsoft\\.rdc$",
+                                "^com\\.microsoft\\.rdc\\.mac$",
+                                "^com\\.microsoft\\.rdc\\.macos$",
+                                "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                "^com\\.teamviewer\\.TeamViewer$",
+                                "^com\\.vmware\\.horizon$"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
